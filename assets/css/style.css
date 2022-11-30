@@ -28,17 +28,10 @@ h1 {
 
 }
 
-/* Removal of link asthetics */
-a {
-    text-decoration: none;
-    color: var(--gray);
-    font-size: 20px;
-    line-height: 75px;
-}
-
 /* Navigation Buttons */
 .nav {
     display: inline-flex;
+    font-size: 10px;
     list-style: none;
     flex-direction: row;
     justify-content: space-evenly;
@@ -46,7 +39,6 @@ a {
     margin: 20px 0px 0px 0px;
     width: 700px;
     height: 50px;
-
 }
 
 .left {
@@ -58,7 +50,7 @@ a {
 .right {
     align-items: right;
     margin: 20px 0px 0px 425px;
-
+    
 }
 
 /* Cloud image */
@@ -75,7 +67,14 @@ a {
     margin: 20px 0px 0px 0px;
 }
 
-div {
+/* Removal of link asthetics */
+a {
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 20px;
+    line-height: 75px;
+}
+h2 {
     font-size: 50px;
     display: flex;
     flex-direction: column;
@@ -104,7 +103,7 @@ p {
 
 .Contacts {
     font-size: 30px;
-    margin-left: 35%;
+    margin-left: 30%;
     width: 600px;
 }
 .Links {
@@ -113,27 +112,71 @@ p {
     list-style: none;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: -30px 0px 0px 0px;
+    margin: -60px 0px 0px 150px;
     padding: 0px;
 }
 
+.Apps {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aLeft {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    height: 600px;
+    margin: 20px 0px 0px -20px;
+}
+
+.workLeft {
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin: 25px 0px 20px 50px;
+}
+
+.aRight {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 0px;
+    max-width: 800px;
+    height: 600px;
+    margin-top: -695px;
+}
+
+.workRight {
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-left: 1040px;
+}
+
+.appLink {
+    font-size: 30px;
+    text-decoration: underline;
+}
 
 @media screen and (max-width: 922px) {
     h1 {
-        margin: 20px 0px -4.2% 250px;
+        margin: 20px 0px -4.2% 260px;
     }
     .left {
-        margin: 0px 0px 0px 80px;
+        margin: 20px 0px 0px 100px;
     }
     .right {
-        margin: 0px 0px 0px 80px;
+        margin: -20px 0px 0px 107px;
     }
     .clouds {
         width: 100%;
         height: 300px;
     }
+    .solid {
+        width: 100%;
+    }
     p {
         font-size: 20px;
+        width: 100%;
     }
     .coming-soon {
         height: 100px;
@@ -142,33 +185,60 @@ p {
     .Working-on-it {
         height: 150px;
         width: 30%;
+    }
+    .aRight {
+        margin-top: 50px;
+    }
+    .workRight {
+        margin-left: 35px;
+    }
+    .Contacts {
+        margin: 0px 0px 0px 280px;
+    }
+    .Links {
+        margin: -20px 480px 0px 0px;
+    }
+    .GitHub {
+        margin: 0px 20px 0px 0px;
     }
 }
 
 @media screen and (max-width: 768px) {
     h1 {
-        margin: 20px 0px -4.2% 170px;
-    }
-    nav {
-        margin: 0px 0px 0px 0px;
+        margin: 20px 0px -4.2% 240px;
     }
     .left .right{
         margin: 0px 0px 0px 0px;
     }
     .clouds {
-        width: 100%;
+        width: 118%;
         height: 300px;
+    }
+    .solid {
+        width: 118%;
     }
     p {
         font-size: 20px;
+        width: 118%;
     }
     .coming-soon {
         height: 100px;
         width: 30%;
     }
-
     .Working-on-it {
         height: 150px;
         width: 30%;
+    }
+    .aLeft {
+        width: 118%;
+    }
+    .aRight {
+        width: 118%;
+    }
+    .Contacts {
+        margin: 0px;
+    }
+    .Links {
+        margin: -60px 0px 0px 200px;
     }
 }
