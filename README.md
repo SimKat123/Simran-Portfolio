@@ -11,6 +11,7 @@ N/A
 ## Usage
 
 Open through any internet browser.
+![Portfolio](./assets/images/Portfolio.png)
 
 ## Credits
 
