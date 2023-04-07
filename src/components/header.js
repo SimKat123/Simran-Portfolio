@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Dropdown, Image, Menu } from "semantic-ui-react";
 
 const NavBar = (props) => {
-  const [activeNav, setNav] = useState("");
+  // const [activeNav, setNav] = useState("");
   return (
     <>
       <div>
@@ -18,36 +18,33 @@ const NavBar = (props) => {
             </Menu.Item>
             <Menu.Item
               position="right"
-              href="/"
               onClick={() => {
-                setNav("AboutMe");
+                // setNav("AboutMe");
                 props.showComponent("AboutMe");
               }}
-              className={
-                activeNav === "AboutMe" || activeNav === ""
-                  ? "highlight-nav"
-                  : ""
-              }
+              // className={
+              //   activeNav === "AboutMe" || activeNav === ""
+              //     ? "highlight-nav"
+              //     : ""
+              // }
             >
               About Me
             </Menu.Item>
             <Menu.Item
-              href="/Portfolio"
               onClick={() => {
-                setNav("Portfolio");
+                // setNav("Portfolio");
                 props.showComponent("Portfolio");
               }}
-              className={activeNav === "Portfolio" ? "highlight-nav" : ""}
+              // className={activeNav === "Portfolio" ? "highlight-nav" : ""}
             >
               Portfolio
             </Menu.Item>
             <Menu.Item
-              href="/Resume"
               onClick={() => {
-                setNav("Resume");
+                // setNav("Resume");
                 props.showComponent("Resume");
               }}
-              className={activeNav === "Resume" ? "highlight-nav" : ""}
+              // className={activeNav === "Resume" ? "highlight-nav" : ""}
             >
               Resume
             </Menu.Item>

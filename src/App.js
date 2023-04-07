@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from "react";
-import NavbarFunction from "./components/navbarfunction";
-import PageNavs from "./components/pageNavs";
+import Navbarfunction from "./components/Navbarfunction";
+import Navigations from "./components/Navigations";
 import AboutMe from "./pages/AboutMe";
 
-function App() {
+function App(props) {
   const [componentNeeded, setComponent] = useState(null);
 
   const showComponent = (component) => {
     setComponent(component);
   };
 
-  useEffect(() => {
-    if (!componentNeeded) {
-      setComponent(AboutMe);
-    }
-  }, [componentNeeded]);
+  // useEffect(() => {
+  //   if (!componentNeeded) {
+  //     setComponent(AboutMe);
+  //   }
+  // }, [componentNeeded]);
 
   return (
     <div>
-      <NavbarFunction showComponent={showComponent} />
-      <PageNavs showComponent={showComponent} />
+      <Navbarfunction showComponent={showComponent} />
+      <Navigations componentNeeded={componentNeeded}
+      showComponent={showComponent} />
     </div>
   );
 }

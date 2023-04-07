@@ -1,9 +1,9 @@
-import Header from "./header";
+import NavBar from "./Header";
 
-const navbarFunction = (props) => {
+const NavbarFunction = (props) => {
     return(
-        <Header showComponent ={props.showComponent}/>
+        <NavBar showComponent ={props.showComponent}/>
     )
 }
 
-export default navbarFunction
+export default NavbarFunction
