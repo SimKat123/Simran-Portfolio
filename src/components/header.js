@@ -1,12 +1,8 @@
-import React from "react";
-import {
-  Container,
-  Dropdown,
-  Image,
-  Menu,
-} from "semantic-ui-react";
+import React, { useState } from "react";
+import { Container, Dropdown, Image, Menu } from "semantic-ui-react";
 
-const NavBar = ({currentPage, newPage}) => {
+const NavBar = (props) => {
+  const [activeNav, setNav] = useState("");
   return (
     <>
       <div>
@@ -15,34 +11,43 @@ const NavBar = ({currentPage, newPage}) => {
             <Menu.Item as="a" header>
               <Image
                 size="tiny"
-                src="/logo.png"
+                src="../../public/logo.png"
                 style={{ marginRight: "1.5em" }}
-                href="/"
               />
               Sim's Portfolio
             </Menu.Item>
             <Menu.Item
-              to="#aboutMe"
               position="right"
-              href="/AboutMe"
-              onClick={() => newPage("AboutMe")}
-              className={currentPage === "AboutMe"}
+              href="/"
+              onClick={() => {
+                setNav("AboutMe");
+                props.showComponent("AboutMe");
+              }}
+              className={
+                activeNav === "AboutMe" || activeNav === ""
+                  ? "highlight-nav"
+                  : ""
+              }
             >
               About Me
             </Menu.Item>
             <Menu.Item
-              to="#Portfolio"
               href="/Portfolio"
-              onClick={() => newPage("Portfolio")}
-              className={currentPage === "Portfolio"}
+              onClick={() => {
+                setNav("Portfolio");
+                props.showComponent("Portfolio");
+              }}
+              className={activeNav === "Portfolio" ? "highlight-nav" : ""}
             >
               Portfolio
             </Menu.Item>
             <Menu.Item
-              to="#resume"
               href="/Resume"
-              onClick={() => newPage("Resume")}
-              className={currentPage === "Resume"}
+              onClick={() => {
+                setNav("Resume");
+                props.showComponent("Resume");
+              }}
+              className={activeNav === "Resume" ? "highlight-nav" : ""}
             >
               Resume
             </Menu.Item>
@@ -51,6 +56,7 @@ const NavBar = ({currentPage, newPage}) => {
                 <Dropdown.Item href="https://github.com/SimKat123">
                   GitHub
                 </Dropdown.Item>
+                <Dropdown.Item href="/Contact">Contact Me</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Container>

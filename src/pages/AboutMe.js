@@ -20,7 +20,7 @@ const AboutMe = () => {
               }}
             >
               <Image
-                src="../assets/images/Profile.png"
+                src="../assets/Profile.png"
                 size="small"
                 verticalAlign="middle"
               />
