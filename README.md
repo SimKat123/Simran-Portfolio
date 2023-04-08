@@ -24,4 +24,4 @@ The dependedcies can be installed by typing the following command: npm i in the 
 
 ## License
 
-Please refer to the LICENSE in the repo.
+No Licencse was used in this repo.
