@@ -11,7 +11,7 @@ const NavBar = (props) => {
             <Menu.Item as="a" header>
               <Image
                 size="tiny"
-                src="../../public/logo.png"
+                src="../assets/logo.png"
                 style={{ marginRight: "1.5em" }}
               />
               Sim's Portfolio
@@ -53,7 +53,7 @@ const NavBar = (props) => {
                 <Dropdown.Item href="https://github.com/SimKat123">
                   GitHub
                 </Dropdown.Item>
-                <Dropdown.Item href="/Contact">Contact Me</Dropdown.Item>
+                <Dropdown.Item>Contact Me</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Container>

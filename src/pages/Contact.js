@@ -74,12 +74,12 @@ export default function Contact() {
     <div>
       <Grid
         textAlign="center"
-        style={{ height: "100vh" }}
+        style={{ height: "40vh" }}
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h2" color="teal" textAlign="center">
-            <Image src="../../public/logo.png" /> Contact Me
+            <Image src="../assets/logo.png" /> Contact Me
           </Header>
           <Form size="large">
             <Segment stacked>

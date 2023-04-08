@@ -5,18 +5,15 @@ import {
   Divider,
   Header,
   Icon,
-  Image,
   Item,
-  Modal,
   Segment,
 } from "semantic-ui-react";
 
 const ResponsiveLayout = () => {
-  const [open, setOpen] = React.useState(false);
-
   return (
     <div>
       <Segment>
+        <Container>
         <Header
           size="huge"
           content="Projects"
@@ -24,168 +21,238 @@ const ResponsiveLayout = () => {
           textAlign="center"
         />
         <Divider />
-        <Container>
           <Item.Group divided>
             <Item>
-              <Modal
-                onClose={() => setOpen(false)}
-                onOpen={() => setOpen(true)}
-                open={open}
-                trigger={<Button>Show Modal</Button>}
-              >
-                <Modal.Header>Password Generator</Modal.Header>
-                <Modal.Content image>
-                  <Image
-                    size="large"
-                    src="../assets/Secure Passwords.png"
-                    alt="Password Generator"
-                    wrapped
-                  />
-                </Modal.Content>
-                <Modal.Actions>
-                  <Button onClick={() => setOpen(false)}>Cancel</Button>
-                  <Button onClick={() => setOpen(false)} positive>
-                    Ok
-                  </Button>
-                </Modal.Actions>
-              </Modal>
               <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://simkat123.github.io/Secure_Passwords/"
-                >
-                  Secure Passwords
-                </Item.Header>
+                <Item.Header>Secure Passwords</Item.Header>
                 <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
+                  A website to help user generate a strong password that is able
+                  to customize the password at the users discretion, in terms of
+                  Uppercase Characters, Lowercase Characters, Numbers, and some
+                  select Special Characters.
                 </Item.Description>
               </Item.Content>
-            </Item>
-
-            <Item>
-              <Item.Image src="../assets/Organizer.png" alt="Organizer" />
-              <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://simkat123.github.io/Become_Organized/"
-                >
-                  Become Organized
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image
-                src="../assets/Weather Around the World.png"
-                alt="Weather Checker"
-              />
-              <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://simkat123.github.io/Weather-around-the-world/"
-                >
-                  Weather Around the World
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image
-                src="../assets/In or Out.png"
-                alt="Dine In or Out App"
-              />
-              <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://vargasdm.github.io/In-or-Out/"
-                >
-                  Dine In or Out
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image
-                src="../assets/ReadMe.png"
-                alt="ReadMe Generator"
-              />
-              <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://github.com/SimKat123/No_More_Manual_ReadMe_files"
-                >
-                  No More Manual ReadMe Files
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image src="../assets/Team.png" alt="Team Organizer" />
-              <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://github.com/SimKat123/Team_Manager"
-                >
-                  Team Manager
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image src="../assets/Notebook.png" alt="Note Taker" />
-              <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://github.com/SimKat123/Notebook"
-                >
-                  Notebook
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image
-                src="../assets/Employee Organizer.png"
-                alt="Employee Organizer"
-              />
-              <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://github.com/SimKat123/Employee_Organizer"
-                >
-                  Employee Organizer
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
-            </Item>
-            <Item>
               <Item.Image>
                 <Button
                   size="massive"
                   fluid
-                  color="grey"
+                  color="purple"
+                  animated
+                  href="https://simkat123.github.io/Secure_Passwords/"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>Become Organized</Item.Header>
+                <Item.Description>
+                  A website to help user manage their daily events in a
+                  organized way. This webpage only lists events that need to be
+                  done within business hours (9 AM to 5 PM).
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://simkat123.github.io/Become_Organized/"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>Weather Around the World</Item.Header>
+                <Item.Description>
+                  A website to help the user prepare for the weather for any
+                  city they search for.
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://simkat123.github.io/Weather-around-the-world/"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>Dine In or Out</Item.Header>
+                <Item.Description>
+                  A description which may flow for several lines and give
+                  context to the content.
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://vargasdm.github.io/In-or-Out/"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>No More Manual ReadMe Files</Item.Header>
+                <Item.Description>
+                  A cool app that uses node.js to generate a ReadMe file using
+                  user input through the command line
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://github.com/SimKat123/No_More_Manual_ReadMe_files"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>Team Manager</Item.Header>
+                <Item.Description>
+                  A generator to help managers organize their team member's
+                  information in an easy to read format.
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://github.com/SimKat123/Team_Manager"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>Notebook</Item.Header>
+                <Item.Description>
+                  An app that helps the user write and save notes in an
+                  organized manner.
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://github.com/SimKat123/Notebook"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>Employee Organizer</Item.Header>
+                <Item.Description>
+                  An Employee Organizer that uses a management database to
+                  oragnize employees based on their roles, and department using
+                  mysql.
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://github.com/SimKat123/Employee_Organizer"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header
+                  as="a"
+                  href="https://github.com/SimKat123/ObjectsAPI"
+                >
+                  Objects API
+                </Item.Header>
+                <Item.Description>
+                  A server based app that uses sql to make a database for
+                  products, by organizing them into categories, products, and
+                  tags.
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
                   animated
                   href="https://drive.google.com/file/d/1pKn3ZLjgEoJu_nl-lB6GHvE74jnP-bCt/view?usp=share_link"
                 >
@@ -197,93 +264,140 @@ const ResponsiveLayout = () => {
                   </Button.Content>
                 </Button>
               </Item.Image>
+            </Item>
+
+            <Item>
               <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://github.com/SimKat123/ObjectsAPI"
+                <Item.Header>Tech Blog</Item.Header>
+                <Item.Description>
+                  A blog that uses cookies, handlebars, and log in sessions.
+                </Item.Description>
+              </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://github.com/SimKat123/Blog"
                 >
-                  Objects API
-                </Item.Header>
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>Chatter Hub</Item.Header>
                 <Item.Description>
                   A description which may flow for several lines and give
                   context to the content.
                 </Item.Description>
               </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image src="../assets/Blog.png" alt="Blog" />
-              <Item.Content>
-                <Item.Header as="a" href="https://github.com/SimKat123/Blog">
-                  Tech Blog
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image src="../assets/ChatterHub.png" alt="ChatterHub" />
-              <Item.Content>
-                <Item.Header
-                  as="a"
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
                   href="https://limitless-stream-42645.herokuapp.com/login"
                 >
-                  Chatter Hub
-                </Item.Header>
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
+            </Item>
+
+            <Item>
+              <Item.Content>
+                <Item.Header>JATE (Just Another Text Editor)</Item.Header>
                 <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
+                  A Text Editor App that users can use offline to write and
+                  organize notes.
                 </Item.Description>
               </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://github.com/SimKat123/JATE"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
             </Item>
+
             <Item>
-              <Item.Image src="../assets/JATE.png" alt="JATE" />
               <Item.Content>
-                <Item.Header as="a" href="https://github.com/SimKat123/JATE">
-                  JATE (Just Another Text Editor)
-                </Item.Header>
+                <Item.Header>Online Library</Item.Header>
                 <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
+                  An app that allows you to search information for books and
+                  organize the books I, a user and reader, have read and plan to
+                  read.
                 </Item.Description>
               </Item.Content>
-            </Item>
-            <Item>
-              <Item.Image
-                src="../assets/Online Library.png"
-                alt="Online Library"
-              />
-              <Item.Content>
-                <Item.Header
-                  as="a"
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
                   href="https://github.com/SimKat123/Online-Library"
                 >
-                  Online Library
-                </Item.Header>
-                <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
-                </Item.Description>
-              </Item.Content>
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
             </Item>
+
             <Item>
-              <Item.Image
-                src="../assets/ScoreSocial.png"
-                alt="ScoreSocial"
-              />
               <Item.Content>
-                <Item.Header
-                  as="a"
-                  href="https://github.com/dianavw8/ScoreSocial"
-                >
-                  ScoreSocial
-                </Item.Header>
+                <Item.Header>ScoreSocial</Item.Header>
                 <Item.Description>
-                  A description which may flow for several lines and give
-                  context to the content.
+                  The ScoreSocial application was built using the MERN stack,
+                  with a React front end, MongoDB database, and
+                  Node.js/Express.js server and API. When using ScoreSocial, the
+                  user can preview games across five different leagues, view the
+                  odds of the games, and by using a point system, place bets to
+                  increase or decrease the total points.
                 </Item.Description>
               </Item.Content>
+              <Item.Image>
+                <Button
+                  size="massive"
+                  fluid
+                  color="purple"
+                  animated
+                  href="https://mighty-cliffs-23244.herokuapp.com/"
+                >
+                  <Button.Content visible>
+                    <Icon name="github" />
+                  </Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
+              </Item.Image>
             </Item>
           </Item.Group>
         </Container>

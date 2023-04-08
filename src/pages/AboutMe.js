@@ -28,8 +28,7 @@ const AboutMe = () => {
             <Grid.Column style={{ marginTop: "7em", marginLeft: "2em" }}>
               <Header size="huge" content="About Me" textAlign="right" />
               <Divider />
-              <Header
-                as="h5">
+              <Header as="h5">
                 Hi there! My name is Simran Katuwal but I go by Sim. I am a
                 graduate of the University of North Carolina at Charlotte. I
                 graduated back in December, 2021 with a Bachelors of Science in
